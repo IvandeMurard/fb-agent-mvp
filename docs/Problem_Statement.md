@@ -104,21 +104,47 @@ Agent cible ces **ajustements fréquents**, pas planning initial.
 - Stress reduced: Manager confident, data-backed decisions
 
 ## 5. MÉTRIQUE DE SUCCÈS #1 (North Star)
-**Primary metric:** Staffing prediction accuracy
-- Baseline: 70% (manager intuition seule)
-- MVP target: 85%+ (agent predictions)
-- Measurement: Compare predicted covers vs actual covers (post-service via POS data)
 
-**Pourquoi ce metric ?**
-- Directement lié au problème (bad predictions = pain)
-- Quantifiable (pas subjectif)
-- Mesurable facilement (POS data)
-- Démontre valeur AI (85% vs 70% = clear improvement)
+**Primary metric:** Staffing prediction accuracy (MAPE - Mean Absolute Percentage Error)
+
+**Industry Benchmarks (Source: Fourth, CloudFoodManager, Imperia SCM):**
+- Manual scheduling: 20-35% MAPE (65-80% accuracy)
+  - Typical: Last year's numbers, averages, manager intuition
+  - Slow, error-prone, misses demand drivers (weather, events, channel mix)
+- Automated/AI scheduling: 8-18% MAPE (82-92% accuracy)
+  - Well-implemented systems using POS history, reservations, weather, events
+  - Improvement: Automation cuts forecast error by roughly half
+
+**Our Targets (Conservative):**
+- **Baseline:** 70% accuracy (30% MAPE) - Manager manual predictions
+  - Mid-range of industry manual scheduling (20-35% MAPE)
+- **MVP target:** 85% accuracy (15% MAPE) - AI-powered predictions
+  - Mid-range of industry AI tools (8-18% MAPE)
+  - Conservative estimate (could achieve 88-90% with optimization)
+- **Improvement:** +15 percentage points accuracy
+  - Aligned with industry "cut error by half" standard
+
+**Measurement Method:**
+- Post-service validation: Compare predicted covers vs actual covers (POS data)
+- Calculate MAPE: Avg(|Predicted - Actual| / Actual) × 100%
+- Track weekly rolling average (30-day window)
+
+**Why this metric:**
+- ✅ Industry-standard measure (MAPE used by Fourth, CloudFoodManager, etc.)
+- ✅ Directly tied to problem (bad predictions = over/under-staffing)
+- ✅ Quantifiable and objective (POS data available)
+- ✅ Demonstrates AI value (70% → 85% = clear improvement)
 
 **Secondary metrics:**
-- Time saved per week (self-reported par manager)
+- Time saved per week (self-reported by manager)
 - Manager satisfaction (NPS-style: "would you recommend?")
-- Revenue impact (calculé via POS data)
+- Revenue impact (calculated via POS: reduced under-staffing loss, over-staffing waste)
+
+**Sources:**
+- Fourth: "Restaurant Forecasting: A Comprehensive Guide" (https://uk.fourth.com/article/restaurant-forecasting-a-comprehensive-guide)
+- Fourth: "Labor Forecasting for Restaurants" (https://www.fourth.com/article/labor-forecasting-for-restaurants)
+- CloudFoodManager: "How Food Service Management Tools Improve Staff Scheduling" (https://cloudfoodmanager.com/how-food-service-management-tools-improve-staff-scheduling/)
+- Imperia SCM: "MAPE and Supply Chain Forecasting" (https://imperiascm.com/blog/mape-and-supply-chain-forecasting-how-to-measure-and-enhance-accuracy)
 
 ## 6. WHY NOW? (Timing / Market context)
 - AI tools costs dropping drastically
