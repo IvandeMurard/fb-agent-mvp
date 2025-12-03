@@ -138,10 +138,10 @@ This dual approach aligns with hospitality's evolution toward **autonomous agent
                     ↓
 4. DEMAND PREDICTOR AGENT
    ├─ Fetch external context:
-   │  ├─ PredictHQ API → Events within 5km radius
-   │  │  (concerts, festivals, holidays)
-   │  └─ Weather API → Forecast for service date
-   │     (rain, temperature, conditions)
+│  ├─ PMS API (Mews/Apaleo) → Hotel occupancy rate
+│  │  (80% occupancy = higher restaurant demand)
+│  ├─ PredictHQ API → Events within 5km radius
+│  └─ Weather API → Forecast for service date
    │
    ├─ Generate embedding:
    │  ├─ Claude API → Create vector representation
@@ -573,7 +573,13 @@ READ (Enhance predictions):
 │  Use case: VIP guest prefers Italian → recommend specific menu
 │
 └─ GET /api/events → Hotel events (conferences, weddings)
-   Use case: 200-person conference → F&B high demand
+│   Use case: 200-person conference → F&B high demand
+│   
+├─ GET /api/reservations → Occupancy forecast
+│  Use case: 80% occupancy tomorrow + concert → 145 covers (confidence boosted)
+│  Logic: High occupancy = more in-house dining demand
+│  Formula: Base prediction × (1 + occupancy_rate × 0.15)
+│  Example: 130 covers base × (1 + 0.80 × 0.15) = 145 covers
 
 WRITE (Future - auto-actions):
 └─ POST /api/finance/charges → Post F&B charges to folios
