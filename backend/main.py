@@ -1,6 +1,6 @@
 """
 F&B Operations Agent - FastAPI Backend
-MVP Phase 0 - Structure placeholder
+MVP Phase 1 - Entry point
 """
 
 from fastapi import FastAPI
@@ -15,7 +15,7 @@ app = FastAPI(
 # CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Next.js dev
+    allow_origins=["http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -25,7 +25,7 @@ app.add_middleware(
 async def root():
     return {
         "message": "F&B Operations Agent API",
-        "status": "Phase 0 - Strategic Preparation",
+        "status": "Phase 1 - Backend Development",
         "docs": "/docs"
     }
 

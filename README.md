@@ -1,6 +1,6 @@
-# 🍽️ F&B Operations Agent
+# F&B Operations Agent - MVP
 
-AI-powered staffing forecasting for restaurant operations.
+**Portfolio case study demonstrating AI Product Management expertise**
 
 ## 📊 Problem
 
@@ -19,11 +19,9 @@ Restaurant managers spend **5-8h/week** on staffing planning with **70% accuracy
 **Frontend:**
 - Next.js 14 + TypeScript
 - shadcn/ui + Tailwind CSS
-- Vercel (hosting)
 
 **Backend:**
 - FastAPI + Python 3.11
-- Render.com (hosting)
 
 **AI/ML:**
 - Claude Sonnet 4 (Anthropic)
@@ -36,28 +34,22 @@ Restaurant managers spend **5-8h/week** on staffing planning with **70% accuracy
 
 ## 📈 Cost Model
 
-- **MVP**: $5.30/restaurant/month
+- **MVP**: $6.65/restaurant/month
 - **Scale (500 restos)**: $1.14/restaurant/month
 - [Full cost model →](https://docs.google.com/spreadsheets/d/1K2AZVUdOeTxWzZQb5FaFIbh_nJXkuGvjTrcNk0Z_OPQ/edit?usp=sharing)
 
 ## 🚀 Status
 
-🚧 **Phase 0: Strategic Preparation** (Day 1/4 complete)
-
-- ✅ Problem Statement
-- ✅ MVP Scope (5 features, 43h effort)
-- ✅ Cost Model
-- 📋 Figma mockups (next)
-- 📋 Architecture doc (next)
+✅ **Phase 0: Strategic Preparation** (Complete - 10.5h)  
+🚧 **Phase 1: Backend Development** (In Progress)
 
 ## 📚 Documentation
 
 - **[Problem Statement](docs/Problem_Statement.md)** - Staffing forecasting problem, persona, metrics
 - **[MVP Scope](docs/MVP_SCOPE.md)** - 5 core features, 43h effort, IN/OUT scope
 - **[Technical Architecture](docs/ARCHITECTURE.md)** - System design, APIs, integrations, scalability
-- **[Cost Model](docs/Cost_Model.md)** - $6.65/month MVP, scale economics | [Google Sheet](https://docs.google.com/spreadsheets/d/1K2AZVUdOeTxWzZQb5FaFIbh_nJXkuGvjTrcNk0Z_OPQ/edit)
+- **[Cost Model](docs/Cost_Model.md)** - $6.65/month MVP, scale economics
 - **[Phase 0 Review](docs/PHASE_0_REVIEW.md)** - Validation checklist, Go/No-Go decision
-
 
 ## 👨‍💻 Author
 
@@ -66,4 +58,4 @@ Restaurant managers spend **5-8h/week** on staffing planning with **70% accuracy
 
 ---
 
-**Built for Mews PM application** • Portfolio case study demonstrating AI product management & agentic experience design
+**Built for Mews PM application** • Demonstrates AI product management, agentic experience design, and hospitality domain expertise
